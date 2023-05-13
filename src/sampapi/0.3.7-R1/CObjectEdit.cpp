@@ -67,8 +67,8 @@ void CObjectEdit::ProcessMouseMove() {
   //reinterpret_cast<float(__thiscall*)(CObjectEdit*)>(sampapi::GetAddress(0x72D90))(this);
 }
 
-BOOL CObjectEdit::MsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam) {
-  return reinterpret_cast<BOOL(__thiscall*)(CObjectEdit*, UINT, WPARAM, LPARAM)>(sampapi::GetAddress(0x6EF70))(this, uMsg, wParam, lParam);
+BOOL CObjectEdit::MsgProc(int uMsg, int wParam, int lParam) {
+  return reinterpret_cast<BOOL(__thiscall*)(CObjectEdit*, int, int, int)>(sampapi::GetAddress(0x6EF70))(this, uMsg, wParam, lParam);
 }
 
 void CObjectEdit::Render() {
