@@ -1,9 +1,9 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
-	
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
+
 	See more here https://github.com/LUCHARE/SAMP-API
-	
+
 	Copyright (c) 2018 BlastHack Team <BlastHack.Net>. All rights reserved.
 */
 
@@ -23,13 +23,7 @@ class SAMPAPI_EXPORT CPlayerPool {
 public:
     enum { MAX_PLAYERS = 1004 };
 
-    int          m_nLargestId;
-    CPlayerInfo* m_pObject[MAX_PLAYERS];
-    BOOL         m_bNotEmpty[MAX_PLAYERS];
-    BOOL         m_bPrevCollisionFlag[MAX_PLAYERS];
-
     struct SAMPAPI_EXPORT {
-        int m_nPing;
         int m_nScore;
         ID  m_nId;
 #ifndef _DEBUG
@@ -39,8 +33,14 @@ public:
     public:
 #endif
         std::string   m_szName;
+        int           m_nPing;
         CLocalPlayer* m_pObject;
     } m_localInfo;
+
+    BOOL         m_bNotEmpty[MAX_PLAYERS];
+    BOOL         m_bPrevCollisionFlag[MAX_PLAYERS];
+    CPlayerInfo* m_pObject[MAX_PLAYERS];
+    int          m_nLargestId;
 
     CPlayerPool();
     ~CPlayerPool();

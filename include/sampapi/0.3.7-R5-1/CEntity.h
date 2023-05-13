@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -20,7 +20,7 @@ SAMPAPI_BEGIN_PACKED_V037R5_1
 
 class SAMPAPI_EXPORT CEntity {
 public:
-    // void **m_lpVtbl = samp.dll+0xEC28C;
+    // void **m_lpVtbl = samp.dll+0xEC2E4;
     char       pad_4[60];
     ::CEntity* m_pGameEntity;
     GTAREF     m_handle;

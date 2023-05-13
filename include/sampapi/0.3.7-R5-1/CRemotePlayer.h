@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -37,14 +37,11 @@ public:
     };
     enum PlayerStatus { PLAYER_STATUS_TIMEOUT = 2 };
 
-    CPed*                          m_pPed;
-    CVehicle*                      m_pVehicle;
-    ID                             m_nId;
-    ID                             m_nVehicleId;
     int                            field_1;
     BOOL                           m_bDrawLabels;
     BOOL                           m_bHasJetpack;
     unsigned char                  m_nSpecialAction;
+    char                           pad_2[12];
     Synchronization::IncarData     m_incarData;
     Synchronization::TrailerData   m_trailerData;
     Synchronization::AimData       m_aimData;
@@ -55,33 +52,35 @@ public:
     unsigned char                  m_nSeatId;
     int                            field_3;
     BOOL                           m_bPassengerDriveBy;
-    CVector                        m_onfootTargetPosition;
-    CVector                        m_onfootTargetSpeed;
-    CVector                        m_incarTargetPosition;
-    CVector                        m_incarTargetSpeed;
     char                           pad_1[76];
     CVector                        m_positionDifference;
-
     struct SAMPAPI_EXPORT {
         float   real;
         CVector imag;
     } m_incarTargetRotation;
-
-    float         m_fReportedArmour;
-    float         m_fReportedHealth;
-    char          pad_2[12];
-    Animation     m_animation;
-    unsigned char m_nUpdateType;
-    TICK          m_lastUpdate;
-    TICK          m_lastTimestamp;
-    BOOL          m_bPerformingCustomAnimation;
-    int           m_nStatus;
+    CVector                        m_onfootTargetPosition;
+    CVector                        m_onfootTargetSpeed;
+    CVector                        m_incarTargetPosition;
+    CVector                        m_incarTargetSpeed;
+    float                          m_fReportedArmour;
+    float                          m_fReportedHealth;
+    Animation                      m_animation;
+    unsigned char                  m_nUpdateType;
+    TICK                           m_lastUpdate;
+    TICK                           m_lastTimestamp;
+    BOOL                           m_bPerformingCustomAnimation;
+    int                            m_nStatus;
 
     struct SAMPAPI_EXPORT {
         CVector m_direction;
         TICK    m_lastUpdate;
         TICK    m_lastLook;
     } m_head;
+
+    CPed*                          m_pPed;
+    CVehicle*                      m_pVehicle;
+    ID                             m_nId;
+    ID                             m_nVehicleId;
 
     BOOL m_bMarkerState;
 

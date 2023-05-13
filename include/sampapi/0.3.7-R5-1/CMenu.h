@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -18,7 +18,7 @@ public:
     enum {
         MAX_MENU_ITEMS = 12,
         MAX_COLUMNS = 2,
-        MAX_MENU_LINE = 32,
+        MAX_MENU_LINE = 33,
     };
 
     struct SAMPAPI_EXPORT Interaction {
@@ -40,11 +40,12 @@ public:
     unsigned char m_nColumnCount[MAX_COLUMNS];
     GTAREF        m_panel;
 
-    CMenu(const char* szTitle, float fX, float fY, char nColumns, float fFirstColumnWidth, float fSecondColumnWidth, const Interaction* pInteraction);
+    CMenu(float fX, float fY, char nColumns, float fFirstColumnWidth, float fSecondColumnWidth, const Interaction* pInteraction);
     CMenu() {
         Hide();
     }
 
+    void  SetTitle(const char* szText);
     void  AddItem(NUMBER nColumn, NUMBER nRow, const char* szText);
     void  SetColumnTitle(NUMBER nColumn, const char* szText);
     void  Hide();

@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -62,7 +62,7 @@ public:
     bool         m_aKeepLoadedVehicleModels[212];
 
     static SAMPAPI_EXPORT SAMPAPI_VAR char*& RefGameTextMessage();  // [256], temp buffer
-    static SAMPAPI_EXPORT SAMPAPI_VAR bool* ArrayUsedPlayerSlots(); // [SAMP_MAX_PLAYER_PED_SLOTS]
+    static SAMPAPI_EXPORT SAMPAPI_VAR BOOL* ArrayUsedPlayerSlots(); // [SAMP_MAX_PLAYER_PED_SLOTS]
 
     CGame();
 

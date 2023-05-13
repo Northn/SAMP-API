@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -12,15 +12,15 @@
 SAMPAPI_BEGIN_V037R5_1
 
 SAMPAPI_VAR CHelpDialog*& RefHelpDialog() {
-    return *(CHelpDialog**)GetAddress(0x26E8BC);
+    return *(CHelpDialog**)GetAddress(0x26EB74);
 }
 
 CHelpDialog::CHelpDialog(IDirect3DDevice9* pDevice) {
-    ((void(__thiscall*)(CHelpDialog*, IDirect3DDevice9*))GetAddress(0x6B3B0))(this, pDevice);
+    ((void(__thiscall*)(CHelpDialog*, IDirect3DDevice9*))GetAddress(0x83D0))(this, pDevice);
 }
 
 void CHelpDialog::Show() {
-    ((void(__thiscall*)(CHelpDialog*))GetAddress(0x6B3C0))(this);
+    ((void(__thiscall*)(CHelpDialog*))GetAddress(0x6BB30))(this);
 }
 
 SAMPAPI_END

@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -12,35 +12,35 @@
 SAMPAPI_BEGIN_V037R5_1
 
 SAMPAPI_VAR CObjectSelection*& RefObjectSelection(VersionTag) {
-    return *(CObjectSelection**)GetAddress(0x26E8AC);
+    return *(CObjectSelection**)GetAddress(0x26EB64);
 }
 
 CObjectSelection::CObjectSelection() {
-    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6D290))(this);
+    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6DA00))(this);
 }
 
 ID CObjectSelection::DefineObject() {
-    return ((ID(__thiscall*)(CObjectSelection*))GetAddress(0x6D2A0))(this);
+    return ((ID(__thiscall*)(CObjectSelection*))GetAddress(0x6DA10))(this);
 }
 
 void CObjectSelection::DrawLabels() {
-    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6D2F0))(this);
+    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6DA60))(this);
 }
 
 void CObjectSelection::Enable(BOOL bEnable) {
-    ((void(__thiscall*)(CObjectSelection*, BOOL))GetAddress(0x6D410))(this, bEnable);
+    ((void(__thiscall*)(CObjectSelection*, BOOL))GetAddress(0x6DB80))(this, bEnable);
 }
 
 void CObjectSelection::Draw() {
-    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6D490))(this);
+    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6DC00))(this);
 }
 
 void CObjectSelection::SendNotification() {
-    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6D560))(this);
+    ((void(__thiscall*)(CObjectSelection*))GetAddress(0x6DCD0))(this);
 }
 
 BOOL CObjectSelection::MsgProc(int uMsg, int wParam, int lParam) {
-    return ((BOOL(__thiscall*)(CObjectSelection*, int, int, int))GetAddress(0x6D6D0))(this, uMsg, wParam, lParam);
+    return ((BOOL(__thiscall*)(CObjectSelection*, int, int, int))GetAddress(0x6DE40))(this, uMsg, wParam, lParam);
 }
 
 SAMPAPI_END

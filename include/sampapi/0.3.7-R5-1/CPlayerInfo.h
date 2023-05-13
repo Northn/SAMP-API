@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -17,8 +17,11 @@ SAMPAPI_BEGIN_PACKED_V037R5_1
 
 class SAMPAPI_EXPORT CPlayerInfo {
 public:
-    CRemotePlayer* m_pPlayer;
+    int            pad_0;
+    int            m_nScore;
+    BOOL           m_bIsNPC;
     int            m_nPing;
+    CRemotePlayer* m_pPlayer;
 #ifndef _DEBUG
 private:
     int __aling;
@@ -26,8 +29,6 @@ private:
 public:
 #endif
     std::string m_szNick;
-    int         m_nScore;
-    BOOL        m_bIsNPC;
 
     CPlayerInfo(const char* szName, BOOL bIsNPC);
     ~CPlayerInfo();

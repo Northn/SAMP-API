@@ -53,4 +53,6 @@ target_sources(sampapi
     Scripting.cpp
     Settings.cpp
     CObjectEdit.cpp
+    CObjectMaterialText.cpp
+    InputHandler.cpp
 )

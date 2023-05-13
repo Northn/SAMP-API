@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -21,18 +21,19 @@ class SAMPAPI_EXPORT CVehicle : public CEntity {
 public:
     enum { MAX_LICENSE_PLATE_TEXT = 32 };
 
-    // void **m_lpVtbl = 0xED6E8;
+    // void **m_lpVtbl = 0xED728;
     CVehicle*          m_pTrailer;
     ::CVehicle*        m_pGameVehicle;
     BOOL	       m_bEngineOn;
-    BOOL               m_bIsInvulnerable;
     BOOL               m_bIsLightsOn;
+    BOOL               m_bIsInvulnerable;
+    int                pad_5c;
     BOOL               m_bIsLocked;
     bool               m_bIsObjective;
     BOOL               m_bObjectiveBlipCreated;
     TICK               m_timeSinceLastDriven;
     BOOL               m_bHasBeenDriven;
-    char               pad_71[4];
+    int                pad_71;
     BOOL               m_bEngineState;
     unsigned char      m_nPrimaryColor;
     unsigned char      m_nSecondaryColor;
@@ -40,7 +41,7 @@ public:
     BOOL               m_bUnoccupiedSync;
     BOOL               m_bRemoteUnocSync;
     BOOL               m_bKeepModelLoaded;
-    int                m_bHasSiren;
+    BOOL               m_bHasSiren;
     IDirect3DTexture9* m_pLicensePlate;
     char               m_szLicensePlateText[MAX_LICENSE_PLATE_TEXT + 1];
     GTAREF             m_marker;

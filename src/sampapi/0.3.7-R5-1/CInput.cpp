@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -12,67 +12,67 @@
 SAMPAPI_BEGIN_V037R5_1
 
 SAMPAPI_VAR CInput*& RefInputBox(VersionTag) {
-    return *(CInput**)GetAddress(0x26E8CC);
+    return *(CInput**)GetAddress(0x26EB84);
 }
 
 CInput::CInput(IDirect3DDevice9* pDevice) {
-    ((void(__thiscall*)(CInput*, IDirect3DDevice9*))GetAddress(0x68C60))(this, pDevice);
+    ((void(__thiscall*)(CInput*, IDirect3DDevice9*))GetAddress(0x693D0))(this, pDevice);
 }
 
 void CInput::GetRect(CRect* pRect) {
-    ((void(__thiscall*)(CInput*, CRect*))GetAddress(0x68CD0))(this, pRect);
+    ((void(__thiscall*)(CInput*, CRect*))GetAddress(0x69440))(this, pRect);
 }
 
 void CInput::Open() {
-    ((void(__thiscall*)(CInput*))GetAddress(0x68D10))(this);
+    ((void(__thiscall*)(CInput*))GetAddress(0x69480))(this);
 }
 
 void CInput::Close() {
-    ((void(__thiscall*)(CInput*))GetAddress(0x68E10))(this);
+    ((void(__thiscall*)(CInput*))GetAddress(0x69580))(this);
 }
 
 void CInput::AddRecall(const char* szString) {
-    ((void(__thiscall*)(CInput*, const char*))GetAddress(0x68E60))(this, szString);
+    ((void(__thiscall*)(CInput*, const char*))GetAddress(0x695D0))(this, szString);
 }
 
 void CInput::RecallUp() {
-    ((void(__thiscall*)(CInput*))GetAddress(0x68EC0))(this);
+    ((void(__thiscall*)(CInput*))GetAddress(0x69630))(this);
 }
 
 void CInput::RecallDown() {
-    ((void(__thiscall*)(CInput*))GetAddress(0x68F30))(this);
+    ((void(__thiscall*)(CInput*))GetAddress(0x696A0))(this);
 }
 
 void CInput::EnableCursor() {
-    ((void(__thiscall*)(CInput*))GetAddress(0x68F80))(this);
+    ((void(__thiscall*)(CInput*))GetAddress(0x696F0))(this);
 }
 
 CMDPROC CInput::GetCommandHandler(const char* szName) {
-    return ((CMDPROC(__thiscall*)(CInput*, const char*))GetAddress(0x68FA0))(this, szName);
+    return ((CMDPROC(__thiscall*)(CInput*, const char*))GetAddress(0x69710))(this, szName);
 }
 
 void CInput::SetDefaultCommand(CMDPROC proc) {
-    ((void(__thiscall*)(CInput*, CMDPROC))GetAddress(0x68FF0))(this, proc);
+    ((void(__thiscall*)(CInput*, CMDPROC))GetAddress(0x69760))(this, proc);
 }
 
 void CInput::AddCommand(const char* szName, CMDPROC handler) {
-    ((void(__thiscall*)(CInput*, const char*, CMDPROC))GetAddress(0x69000))(this, szName, handler);
+    ((void(__thiscall*)(CInput*, const char*, CMDPROC))GetAddress(0x69770))(this, szName, handler);
 }
 
 BOOL CInput::MsgProc(int uMsg, int wParam, int lParam) {
-    return ((BOOL(__thiscall*)(CInput*, int, int, int))GetAddress(0x69060))(this, uMsg, wParam, lParam);
+    return ((BOOL(__thiscall*)(CInput*, int, int, int))GetAddress(0x697D0))(this, uMsg, wParam, lParam);
 }
 
 void CInput::ResetDialogControls(CDXUTDialog* pGameUi) {
-    ((void(__thiscall*)(CInput*, CDXUTDialog*))GetAddress(0x690D0))(this, pGameUi);
+    ((void(__thiscall*)(CInput*, CDXUTDialog*))GetAddress(0x69840))(this, pGameUi);
 }
 
 void CInput::Send(const char* szString) {
-    ((void(__thiscall*)(CInput*, const char*))GetAddress(0x69190))(this, szString);
+    ((void(__thiscall*)(CInput*, const char*))GetAddress(0x69900))(this, szString);
 }
 
 void CInput::ProcessInput() {
-    ((void(__thiscall*)(CInput*))GetAddress(0x69260))(this);
+    ((void(__thiscall*)(CInput*))GetAddress(0x699D0))(this);
 }
 
 SAMPAPI_END

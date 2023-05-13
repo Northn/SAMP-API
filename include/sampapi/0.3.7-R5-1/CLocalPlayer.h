@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -38,7 +38,6 @@ enum SurfingMode {
 
 class SAMPAPI_EXPORT CLocalPlayer {
 public:
-    CPed* m_pPed;
 
     Synchronization::IncarData     m_incarData;
     Synchronization::AimData       m_aimData;
@@ -50,8 +49,12 @@ public:
     BOOL      m_bIsWasted;
     ID        m_nCurrentVehicle;
     ID        m_nLastVehicle;
+
     Animation m_animation;
-    int       field_1;
+    int       field_100;
+
+    CPed*     m_pPed;
+
     BOOL      m_bDoesSpectating;
     NUMBER    m_nTeam;
     short     field_10d;

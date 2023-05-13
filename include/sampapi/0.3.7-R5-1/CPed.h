@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -44,7 +44,7 @@ public:
         D3DCOLOR m_secondMaterialColor;
     };
 
-    // void **m_lpVtbl = 0xED0FC;
+    // void **m_lpVtbl = 0xED140;
     BOOL m_bUsingCellphone;
 
     struct SAMPAPI_EXPORT {

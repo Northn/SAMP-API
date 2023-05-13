@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -12,35 +12,35 @@
 SAMPAPI_BEGIN_V037R5_1
 
 CActorPool::CActorPool() {
-    ((void(__thiscall*)(CActorPool*))GetAddress(0x16B0))(this);
+    ((void(__thiscall*)(CActorPool*))GetAddress(0x16C0))(this);
 }
 
 CActorPool::~CActorPool() {
-    ((void(__thiscall*)(CActorPool*))GetAddress(0x18D0))(this);
+    ((void(__thiscall*)(CActorPool*))GetAddress(0x18E0))(this);
 }
 
 CActor* CActorPool::Get(ID nId) {
-    return ((CActor * (__thiscall*)(CActorPool*, ID)) GetAddress(0x1600))(this, nId);
+    return ((CActor * (__thiscall*)(CActorPool*, ID)) GetAddress(0x1610))(this, nId);
 }
 
 BOOL CActorPool::DoesExist(ID nId) {
-    return ((BOOL(__thiscall*)(CActorPool*, ID))GetAddress(0x1630))(this, nId);
+    return ((BOOL(__thiscall*)(CActorPool*, ID))GetAddress(0x1640))(this, nId);
 }
 
 void CActorPool::UpdateLargestId() {
-    ((void(__thiscall*)(CActorPool*))GetAddress(0x1650))(this);
+    ((void(__thiscall*)(CActorPool*))GetAddress(0x1660))(this);
 }
 
 BOOL CActorPool::Delete(ID nId) {
-    return ((BOOL(__thiscall*)(CActorPool*, ID))GetAddress(0x16E0))(this, nId);
+    return ((BOOL(__thiscall*)(CActorPool*, ID))GetAddress(0x16F0))(this, nId);
 }
 
 ID CActorPool::Find(::CPed* pGamePed) {
-    return ((ID(__thiscall*)(CActorPool*, ::CPed*))GetAddress(0x18A0))(this, pGamePed);
+    return ((ID(__thiscall*)(CActorPool*, ::CPed*))GetAddress(0x18B0))(this, pGamePed);
 }
 
 BOOL CActorPool::Create(ActorInfo* pInfo) {
-    return ((BOOL(__thiscall*)(CActorPool*, ActorInfo*))GetAddress(0x18F0))(this, pInfo);
+    return ((BOOL(__thiscall*)(CActorPool*, ActorInfo*))GetAddress(0x1900))(this, pInfo);
 }
 
 SAMPAPI_END

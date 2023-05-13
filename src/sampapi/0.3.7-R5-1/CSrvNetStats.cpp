@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -12,15 +12,15 @@
 SAMPAPI_BEGIN_V037R5_1
 
 SAMPAPI_VAR CSrvNetStats*& RefServerNetStatistics() {
-    return *(CSrvNetStats**)GetAddress(0x26E8B8);
+    return *(CSrvNetStats**)GetAddress(0x26EB70);
 }
 
 CSrvNetStats::CSrvNetStats(IDirect3DDevice9* pDevice) {
-    ((void(__thiscall*)(CSrvNetStats*, IDirect3DDevice9*))GetAddress(0x70B30))(this, pDevice);
+    ((void(__thiscall*)(CSrvNetStats*, IDirect3DDevice9*))GetAddress(0x71220))(this, pDevice);
 }
 
 void CSrvNetStats::Draw() {
-    ((void(__thiscall*)(CSrvNetStats*))GetAddress(0x70B70))(this);
+    ((void(__thiscall*)(CSrvNetStats*))GetAddress(0x71260))(this);
 }
 
 SAMPAPI_END

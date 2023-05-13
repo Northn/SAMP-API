@@ -1,9 +1,19 @@
+/*
+        This is a SAMP (0.3.7-R5) API project file.
+        Developers: LUCHARE <luchare.dev@gmail.com>, Northn
+
+        See more here https://github.com/LUCHARE/SAMP-API
+
+	Copyright (c) 2018 BlastHack Team <BlastHack.Net>. All rights reserved.
+*/
+
 #pragma once
 
 #include "sampapi/sampapi.h"
 #include "sampapi/CVector.h"
 #include "sampapi/CMatrix.h"
-#include <windows.h>
+#include "sampapi/CRect.h"
+#include "sampapi/CPoint.h"
 
 SAMPAPI_BEGIN_PACKED_V037R5_1
 
@@ -37,39 +47,39 @@ enum ObjectEditProcessType
 class CObjectEdit
 {
 public:
-  POINT m_CharMaxSize;
-  RECT m_xAxisButtonRect;
-  RECT m_yAxisButtonRect;
-  RECT m_zAxisButtonRect;
-  RECT m_PositionButtonRect;
-  RECT m_RotationButtonRect;
-  RECT m_ScaleButtonRect;
-  RECT m_SaveButtonRect;
-  int m_nEditType;
-  int m_nEditMode;
-  BOOL m_bEnabled;
-  BOOL m_bRenderedThisFrame;
-  sampapi::ID m_nEditObjectId;
-  unsigned int m_nAttachedObjectIndex;
-  BOOL m_bIsPlayerObject;
-  sampapi::CVector rotation;
-  unsigned int m_nLastSentNotificationTick;
-  bool m_bRenderScaleButton;
-  bool m_bEditingRightNow;
-  bool m_bTopXOfObjectIsOnLeftOfScreen;
-  bool m_bTopYOfObjectIsOnLeftOfScreen;
-  bool m_bTopZOfObjectIsOnLeftOfScreen;
-  POINT m_EditStartPos;
-  POINT m_CursorPosInGame;
-  BOOL m_bObjectXSizeYCoordDiffMoreThanX;
-  BOOL m_bObjectYSizeYCoordDiffMoreThanX;
-  BOOL m_bObjectZSizeYCoordDiffMoreThanX;
-  sampapi::CMatrix m_entityMatrix;
-  IDirect3DDevice9 *m_pDevice;
-  ID3DXLine *m_pLine;
-  ID3DXFont *m_pIconFontSmall;
-  ID3DXFont *m_pIconFontBig;
-  int m_nProcessType;
+  CPoint            m_CharMaxSize;
+  CRect             m_xAxisButtonRect;
+  CRect             m_yAxisButtonRect;
+  CRect             m_zAxisButtonRect;
+  CRect             m_PositionButtonRect;
+  CRect             m_RotationButtonRect;
+  CRect             m_ScaleButtonRect;
+  CRect             m_SaveButtonRect;
+  int               m_nEditType;
+  int               m_nEditMode;
+  BOOL              m_bEnabled;
+  BOOL              m_bRenderedThisFrame;
+  sampapi::ID       m_nEditObjectId;
+  unsigned int      m_nAttachedObjectIndex;
+  BOOL              m_bIsPlayerObject;
+  sampapi::CVector  rotation;
+  unsigned int      m_nLastSentNotificationTick;
+  bool              m_bRenderScaleButton;
+  bool              m_bEditingRightNow;
+  bool              m_bTopXOfObjectIsOnLeftOfScreen;
+  bool              m_bTopYOfObjectIsOnLeftOfScreen;
+  bool              m_bTopZOfObjectIsOnLeftOfScreen;
+  CPoint            m_EditStartPos;
+  CPoint            m_CursorPosInGame;
+  BOOL              m_bObjectXSizeYCoordDiffMoreThanX;
+  BOOL              m_bObjectYSizeYCoordDiffMoreThanX;
+  BOOL              m_bObjectZSizeYCoordDiffMoreThanX;
+  sampapi::CMatrix  m_entityMatrix;
+  IDirect3DDevice9* m_pDevice;
+  ID3DXLine*        m_pLine;
+  ID3DXFont*        m_pIconFontSmall;
+  ID3DXFont*        m_pIconFontBig;
+  int               m_nProcessType;
 
   CObjectEdit(IDirect3DDevice9 *RefDevice);
   float WorldToScreen(sampapi::CVector *in, float(&out)[2]);
@@ -86,7 +96,7 @@ public:
   BOOL RenderControlsForObject(sampapi::CMatrix* object_matrix, float linesize);
   void ApplyChanges(ObjectEditProcessType type, float diff);
   void ProcessMouseMove();
-  BOOL MsgProc(UINT uMsg, WPARAM wParam, LPARAM lParam);
+  BOOL MsgProc(int uMsg, int wParam, int lParam);
   void Render();
 
 

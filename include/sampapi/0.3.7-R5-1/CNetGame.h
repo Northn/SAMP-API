@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -57,15 +57,15 @@ public:
     };
 
     struct SAMPAPI_EXPORT Pools {
-        CMenuPool*     m_pMenu;
-        CActorPool*    m_pActor;
-        CPlayerPool*   m_pPlayer;
         CVehiclePool*  m_pVehicle;
+        CPlayerPool*   m_pPlayer;
         CPickupPool*   m_pPickup;
         CObjectPool*   m_pObject;
-        CGangZonePool* m_pGangzone;
+        CActorPool*    m_pActor;
+        CGangZonePool* m_pGangZone;
         CLabelPool*    m_pLabel;
-        CTextDrawPool* m_pTextdraw;
+        CTextDrawPool* m_pTextDraw;
+        CMenuPool*     m_pMenu;
     };
 
     struct SAMPAPI_EXPORT Settings {
@@ -93,8 +93,8 @@ public:
         bool          m_bLtdChatRadius;
     };
 
-    char                pad_0[44];
     RakClientInterface* m_pRakClient;
+    char                pad_0[44];
     char                m_szHostAddress[257];
     char                m_szHostname[257];
     bool                m_bDisableCollision;

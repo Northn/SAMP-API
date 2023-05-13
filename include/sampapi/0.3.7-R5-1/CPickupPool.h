@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -39,7 +39,7 @@ public:
     CPickupPool();
     ~CPickupPool();
 
-    void Create(Pickup* pData, ID nId);
+    void Create(Pickup* pData, int nId);
     void CreateWeapon(int nModel, CVector position, int nAmmo, ID nExOwner);
     void Delete(int nId);
     void DeleteWeapon(ID nExOwner);

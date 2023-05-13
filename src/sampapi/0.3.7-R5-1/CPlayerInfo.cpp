@@ -1,6 +1,6 @@
 /*
 	This is a SAMP (0.3.7-R5) API project file.
-	Developer: LUCHARE <luchare.dev@gmail.com>
+	Developers: LUCHARE <luchare.dev@gmail.com>, Northn
 	
 	See more here https://github.com/LUCHARE/SAMP-API
 	
@@ -12,11 +12,11 @@
 SAMPAPI_BEGIN_V037R5_1
 
 CPlayerInfo::CPlayerInfo(const char* szName, BOOL bIsNPC) {
-    ((void(__thiscall*)(CPlayerInfo*, const char*, BOOL))GetAddress(0x13DE0))(this, szName, bIsNPC);
+    ((void(__thiscall*)(CPlayerInfo*, const char*, BOOL))GetAddress(0x141B0))(this, szName, bIsNPC);
 }
 
 CPlayerInfo::~CPlayerInfo() {
-    ((void(__thiscall*)(CPlayerInfo*))GetAddress(0x13B60))(this);
+    ((void(__thiscall*)(CPlayerInfo*))GetAddress(0x13F60))(this);
 }
 
 SAMPAPI_END
