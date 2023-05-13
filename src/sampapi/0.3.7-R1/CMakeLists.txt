@@ -54,4 +54,5 @@ target_sources(sampapi
     CObjectEdit.cpp
     CChatBubble.cpp
     CHelpDialog.cpp
+    CObjectMaterialText.cpp
 )

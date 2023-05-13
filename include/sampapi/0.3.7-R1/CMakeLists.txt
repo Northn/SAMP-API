@@ -58,4 +58,5 @@ target_sources(sampapi
     CObjectEdit.h
     CChatBubble.h
     CHelpDialog.h
+    CObjectMaterialText.h
 )
